@@ -21,6 +21,7 @@ export default function Dos(){
 
   const [mostrarInputOtroProducto, setMostrarInputOtroProducto] = React.useState(false);
   const [Revision, setRevision] = React.useState("");
+  const [Envasee, setTipoDenvase] = React.useState("");
   const RevisionList = [
       {key:'1', value:'Nombre del Producto', },
       {key:'2', value:'Nombre y Dirección del Manufacturador'},
@@ -137,7 +138,7 @@ export default function Dos(){
 
           <View style = {{flexDirection: 'column'}}>
               {elementosIzq1.map((elementosIzq1, index) => (
-              <InputText key={index} nombre={elementosIzq1} ancho ={"90%"} />
+              <InputText key={index} nombre={elementosIzq1} ancho ={"90%"} place={''}/>
               ))}
 
           <View style = {[styles.containerDrop, {paddingBottom:'1%'}]}>
@@ -146,7 +147,7 @@ export default function Dos(){
           <SelectList 
             boxStyles={styles.box}
             dropdownStyles={styles.box}
-           setSelected={(val) => setTipoDeEnvase(val)}        
+           setSelected={(val) => setTipoDenvase(val)}        
             data={Envase} 
             save="value"
           />

@@ -5,6 +5,7 @@ import { SelectList } from 'react-native-dropdown-select-list';
 import Uno from './recuadros/Uno';
 import Dos from './recuadros/Dos'
 import Tres from './recuadros/Tres';
+import Cuatro from './recuadros/Cuatro';
 
 export default function REBRP61COMP() {
   return (
@@ -18,7 +19,9 @@ export default function REBRP61COMP() {
           <View style = {styles.Container}>
             <Tres></Tres>
           </View>
-      
+          <View style = {styles.Container}>
+            <Cuatro></Cuatro>
+          </View>
     </View>
 
 

@@ -9,7 +9,7 @@ export default function Tres(){
   const [dataCamion, setDataCamion] = React.useState("");
   const [data_InspCont, setData_InspCont] = React.useState("");
 
-
+  const elem1=['Observaciones'];
   const inspCamion = [
     {key:'1', value:'Olores', },
     {key:'2', value:'Residuos'},
@@ -34,7 +34,7 @@ const inspConte = [
   return(
       <View style= {styles.firstContainer}>
         <View>
-          <Text style = {[styles.titulo,{fontSize:17}]}></Text>
+          <Text style = {[styles.titulo,{fontSize:17}]}>Llenar solo en el Embarque ( Durante el mismo)</Text>
         </View>
         <View style = {styles.containerDrop}> 
             <Text style = {styles.titulo}>
@@ -61,8 +61,14 @@ const inspConte = [
             save="value"
             label="Categories"
             />
-          </View> 
-          
+          </View>
+          <View>
+          <View style = {{flexDirection: 'column'}}>
+          {elem1.map((elem1, index) => (
+              <InputText key={index} nombre={elem1} ancho ={"90%"} place={''}/>
+              ))}
+          </View>
+          </View>
       </View>
   )
 }

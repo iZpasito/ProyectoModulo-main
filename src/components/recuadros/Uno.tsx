@@ -126,7 +126,7 @@ export default function Uno(){
 
           <View style = {{flexDirection: 'column'}}>
               {elementosIzq1.map((elementosIzq1, index) => (
-              <InputText key={index} nombre={elementosIzq1} ancho ={"90%"} />
+              <InputText key={index} nombre={elementosIzq1} ancho ={"90%"} place={''}/>
               ))}
 
           <View style = {[styles.containerDrop, {paddingBottom:'1%'}]}>

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View,TextInput } from 'react-native';
 
 
-export default function InputText({nombre,ancho}){
+export default function InputText({nombre,ancho,place}){
     const [text, onChangeText] = React.useState('');
+    const placeholder = place || 'Escribe aquí...   ';
 
     return (
         <View style={styles.body}>
@@ -12,7 +13,7 @@ export default function InputText({nombre,ancho}){
             style={styles.input}
             onChangeText={onChangeText}
             value={text}
-            placeholder="Escribe aquí...   "
+            placeholder={placeholder}
             placeholderTextColor="#a9a9a9"
           />
       </View> 
